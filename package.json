@@ -15,6 +15,10 @@
     "vue",
     "nuxt"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kirano-dev/kirano-starter.git"
+  },
   "author": "kirano-dev",
   "type": "module",
   "license": "ISC",
