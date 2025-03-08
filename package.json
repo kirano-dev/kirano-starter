@@ -1,5 +1,5 @@
 {
-  "name": "kirano",
+  "name": "kirano-starter",
   "version": "0.0.1",
   "description": "Starter pack for create Vue & Nuxt applications",
   "main": "index.js",
