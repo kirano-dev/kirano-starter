@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/icons/*": ["./src/assets/icons/*"],
+      "@/img/*": ["./src/assets/img/*"],
+      "@/views/*": ["./src/views/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}
