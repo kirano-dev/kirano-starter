@@ -1,0 +1,14 @@
+.container {
+	padding: 0 15px;
+	margin: 0 auto;
+	width: 1240px;
+	max-width: 100%;
+	
+	&.container_fluid {
+		width: 1980px;
+		
+		&:has(.container) {
+			padding: 0;
+		}
+	}
+}
