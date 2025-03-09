@@ -4,7 +4,7 @@ import './icons.js';
 import {createApp} from 'vue'
 import App from './App.vue'
 import router from './router'
-import AppLayout from "@/layouts/AppLayout.vue";
+import AppLayout from "@/layouts/app-layout.vue";
 
 const app = createApp(App)
 

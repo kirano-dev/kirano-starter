@@ -3,5 +3,5 @@ export const AppLayoutsEnum = {
 }
 
 export const AppLayoutToFileMap = {
-    default: "AppLayoutDefault.vue",
+    default: "app-layout-default.vue",
 };
