@@ -9,16 +9,17 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const createProject = (template, name) => {
-	createDirectory(name)
-	copy(
-		path.join(__dirname, `../templates/${template}`),
-		name
-	)
-	
-	console.log(`Проект ${name} создан, следующие шаги:`)
-	console.log(chalk.yellow(`cd ${name}`))
-	console.log(chalk.yellow(`npm i`))
-	console.log(chalk.yellow(`npm run dev`))
+	if(createDirectory(name)) {
+		copy(
+			path.join(__dirname, `../templates/${template}`),
+			name
+		)
+		
+		console.log(`Проект ${name} создан, следующие шаги:`)
+		console.log(chalk.yellow(`cd ${name}`))
+		console.log(chalk.yellow(`npm i`))
+		console.log(chalk.yellow(`npm run dev`))
+	}
 }
 
 export default (args) => {
