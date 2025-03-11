@@ -18,7 +18,8 @@ export default () => {
 		console.log('')
 		console.log('Доступные команды:')
 		console.log('')
-		console.log('- ' + chalk.yellow('create:vue'))
-		console.log('- ' + chalk.yellow('create:nuxt'))
+		console.log('- ' + chalk.yellow('create:vue') + ' - Создание Vue приложения')
+		console.log('- ' + chalk.yellow('create:nuxt') + ' - Создание Nuxt приложения')
+		console.log('- ' + chalk.yellow('version (-v, --v)') + ' - Проверка версии')
 	})
 }

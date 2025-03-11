@@ -3,15 +3,11 @@ import * as readline from "node:readline";
 import createDirectory from "../utils/createDirectory.js";
 import copy from "../utils/copy.js";
 import path from "node:path";
-import {fileURLToPath} from "node:url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 const createProject = (template, name) => {
 	if(createDirectory(name)) {
 		copy(
-			path.join(__dirname, `../templates/${template}`),
+			path.join(import.meta.dirname, `../templates/${template}`),
 			name
 		)
 		
