@@ -1,20 +1,20 @@
 import chalk from "chalk";
 import * as readline from "node:readline";
 import createDirectory from "../utils/createDirectory.js";
-import copy from "../utils/copy.js";
 import path from "node:path";
+import extract from "extract-zip";
 
 const createProject = (template, name) => {
 	if(createDirectory(name)) {
-		copy(
-			path.join(import.meta.dirname, `../templates/${template}`),
-			name
-		)
-		
-		console.log(`Проект ${name} создан, следующие шаги:`)
-		console.log(chalk.yellow(`cd ${name}`))
-		console.log(chalk.yellow(`npm i`))
-		console.log(chalk.yellow(`npm run dev`))
+		extract(
+			path.join(import.meta.dirname, `../templates-zip/${template}.zip`),
+			{dir: path.join(process.cwd(), name)}
+		).then(r => {
+			console.log(`Проект ${name} создан, следующие шаги:`)
+			console.log(chalk.yellow(`cd ${name}`))
+			console.log(chalk.yellow(`npm i`))
+			console.log(chalk.yellow(`npm run dev`))
+		})
 	}
 }
 

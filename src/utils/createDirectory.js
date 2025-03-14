@@ -7,6 +7,7 @@ export default (name) => {
 		return true
 	} catch (err) {
 		console.error(`Директория ${name} уже существует`);
+		console.error(err);
 	}
 	
 	return false
